@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>LISTA DE TAREFAS</h1>
+<ul>
+    {% for task in tasks %}
+        <li>
+            <a href="{% url 'list_tasks' task.id  %}"> task.titulo </a>
+            - {{ task.concluida }}
+        </li>
+    
+    {% empty %}
+        <li>Nenhuma tarega encontrada</li>
+    {% endfor %}
+</ul>
+    
+{% endblock %}

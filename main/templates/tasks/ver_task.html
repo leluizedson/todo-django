@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ task.titulo}}</h1>
+<p>{{ task.descricao}}</p>
+<p>{{task.criado_em}}</p>
+<p>{{task.concluida}}</p>
+<a href="{% url 'list_tasks' %}">Voltar para lista </a>
+
+{%endblock%}
